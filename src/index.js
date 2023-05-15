@@ -24,7 +24,9 @@ const enviar = document.getElementById('formulario');
 const contactSpan = document.getElementById('mensajeEnviar');
 
 enviar.addEventListener('submit', function(){ 
-  contactSpan.innerHTML = "¡Muchas gracias por tu interés! Por el mometo este formulario se encuentra fuera de servicio. Para contactarte, podés enviar un correo haciendo click en el ícono de mensje aquí abajo, en la seccion de redes."
+  const mensajeNoEnviado = document.createElement('p');
+  mensajeNoEnviado.textContent = '¡Muchas gracias por tu interés! <br> <i class="fa-solid fa-triangle-exclamation"></i> Por el mometo este formulario se encuentra fuera de servicio. <i class="fa-solid fa-triangle-exclamation"></i> <br> Para contactarte, podés enviar un correo haciendo click en el ícono de mensje aquí abajo, en la seccion de redes.';
+  contactSpan.innerHTML =  mensajeNoEnviado.textContent;
   return false;
 });
 
