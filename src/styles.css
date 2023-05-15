@@ -163,7 +163,7 @@ nav {
 }
 
 .my-stack section{
-  width: 80%;
+  width: 70%;
 }
 
 .my-stack div{
@@ -202,6 +202,7 @@ nav {
 
 #pixel-art, .apps{
  background-color: rgb(153, 250, 184);
+ box-shadow: 5px 5px rgb(158, 148, 243); 
  padding: 20px;
  width: 550px;
  height: 230px;
@@ -215,6 +216,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   text-align: justify;
+  height: 145px;
 }
 .content div{
   margin: 0 10px;
@@ -281,6 +283,7 @@ form{
   border: 0px;
   font-weight: bold;
   font-size: 20px;
+  font-family: inherit;
 }
 
 .contacto button:hover{ 
