@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Cálculo de ahorros</title>
+	<script type="text/javascript" src="../src/plazo_fijo.js"></script>
+	<link rel="stylesheet" href="../src/calculadora.css" />
+</head>
+<body>
+	<section class="all">
+		<h3 class="title">IMPACTO DE RECUCIR O ELIMINAR GASTOS</h3>
+		<section class="container">
+			<div class="box">
+			<h3>Ahorro mensual</h3>		
+			<form action="#" method="POST" id="datos" onsubmit="return false;"> 
+				<p>
+					<label for="Gastos1:">Gastos a reducir o eliminar 1:</label>
+					<br>
+					<input class="text" type="text" name="Gastos1" id="Gastos1" placeholder="Ej.: Restaurantes"/>
+					<br>
+				</p>
+				<p>
+					<br>
+					<label for="valor1:">Ahorro mensual 1:</label>
+					<br>				
+					$ <input class="number" type="number" id="valor1" placeholder="Ej.: 1000"/>										
+				</p>	
+				<hr>
+				<p>
+					<label for="Gastos2:">Gastos a reducir o eliminar 2:</label>
+					<br>
+					<input class="text" type="text" name="Gastos2" id="Gastos2" placeholder="Ej.: Cine"/>	
+					<br>
+				</p>
+				<p>
+					<br>
+					<label for="valor2:">Ahorro mensual 2:</label>
+					<br>
+					$ <input class="number" type="number" id="valor2" placeholder="Ej.: 1000"/>	
+				</p>
+				<hr>				
+				<p>
+					<label for="Gastos3:">Gastos a reducir o eliminar 3:</label>
+					<br>
+					<input class="text" type="text" name="Gastos3" id="Gastos3" placeholder="Ej.: Videojuegos"/>
+					<br>
+				</p>
+				<p>
+					<br>
+					<label for="valor3:">Ahorro mensual 3:</label>
+					<br>
+					$ <input class="number"  type="number" id="valor3" placeholder="Ej.: 1000"/>
+				</p>
+				<br>
+							
+				<input type="submit" value="Sumar" id="submit" class="submit" />
+				<br>
+				<p id="suma">
+					Suma: $ <span></span>
+				</p>				
+			</form>
+		</div>
+		<div id="calculo">
+			<form action="#" method="POST" id="ahorro" onsubmit="return false;">
+				<p>
+					<label for="tasa:">Tasa de ahorro mensual:</label>
+					<br>
+					% <input class="number" type="number" step="0.01" id="tasa" placeholder="Ej.: 3.5" />
+					<br>
+				</p>
+				<p>
+					<label for="tiempo:">Tiempo estimado de ahorro en años:</label>
+					<br>
+					<input class="number" type="number" id="tiempo" /> años.
+					<br>
+				</p>
+				<input type="submit" value="Calcular" id="submit" class="submit" />
+				<p>Debe realizar la suma de los items a ahorrar antes de calcular el ahorro total.</p>
+				<br>
+				<p id="total">
+					Total: <span></span>
+				</p>	
+			</form>
+		</div>
+		</section>		
+	</section>
+			
+</body>
+</html>

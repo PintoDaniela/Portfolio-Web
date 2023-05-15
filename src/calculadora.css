@@ -1,0 +1,105 @@
+body{
+    /*
+    background-image: url('../images/binary-background.jpg');
+    background-size: cover; 
+    */	
+    background-image: linear-gradient(
+        to bottom right,
+        rgb(208, 203, 253),
+        rgb(79, 64, 206)
+      );	
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+}
+.all{
+    margin: 70px;
+    width: 730px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.container{
+    width: 700px;			
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    font-family: monospace;
+    height: 500px;
+    width: 350px;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: left;
+}
+#total{
+    font-family: monospace;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    color: rgb(155, 245, 175);
+    background-color:rgb(79, 64, 206);	
+    border-radius: 15px;					
+}
+#calculo{
+    font-family: monospace;
+    height: 500px;
+    width: 350px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+div{
+    font-family: monospace;
+    margin: 2px;			
+}
+h3{			
+    font-family: monospace;
+    color: rgb(155, 245, 175);
+    background-color: rgb(79, 64, 206);
+    padding: 10px;
+    margin-top: 0px;
+    border-radius: 15px;
+}
+.title{
+    font-family: monospace;
+    background-color: rgb(79, 64, 206);
+    padding: 20px 0px;
+    width: 100%;
+    text-align: center;
+}
+p{
+    font-family: monospace;
+    color: rgb(155, 245, 175);			
+}
+#submit{
+    font-family: monospace;
+    font-weight: bold;
+    background-color: rgb(155, 245, 175);
+    color: rgb(79, 64, 206);
+    padding: 10px;
+    border-radius: 15px;
+}
+.text{
+    font-family: monospace;
+    float: left;
+    font-weight: bold;			
+}
+.number{
+    font-family: monospace;
+
+}
+label{			
+    float: left;	
+    margin-bottom: 10px;					
+}
+#valor1, #valor2, #valor3, #tiempo, #tasa{
+    width: 100px !important;
+}
