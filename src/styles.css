@@ -163,7 +163,7 @@ nav {
 }
 
 .my-stack section{
-  padding: 80px 250px;
+  width: 80%;
 }
 
 .my-stack div{
@@ -181,17 +181,30 @@ nav {
 }
 
 .my-stack img{
-  height: 50px;
+  height: 60px;
   margin-top: 20px;  
 }
 
 
 /*MY PROJECTS*/
+@media only screen and (max-width: 800px){
+  .apps{
+    max-width: 600px;
+  }
+  .apps img{
+    visibility: hidden;
+    width: 0;
+  }
+  #pixel-art{
+    height: auto;
+  }
+}
+
 #pixel-art, .apps{
  background-color: rgb(153, 250, 184);
  padding: 20px;
- width: 40%;
- height: 220px;
+ width: 550px;
+ height: 230px;
  text-align: center;
  margin: 20px; 
 }
@@ -212,7 +225,7 @@ nav {
 
 #pixel-art img{
   height: 60px;
-  margin: 20px;
+  /*margin: 20px;*/
 }
 
 /*
