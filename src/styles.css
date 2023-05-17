@@ -184,7 +184,11 @@ nav {
   height: 60px;
   margin-top: 20px;  
 }
-
+.my-stack iconify-icon{
+  color: rgb(158, 148, 243);
+  font-size: 75px;
+  margin: 20px;
+}
 
 /*MY PROJECTS*/
 @media only screen and (max-width: 800px){
@@ -305,7 +309,7 @@ form{
 
 .redes i{
   margin: 15px;
-  font-size: 30px;
+  font-size: 50px;
   color: rgb(153, 250, 184);
 }
 
