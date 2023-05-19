@@ -25,8 +25,13 @@ const contactSpan = document.getElementById('mensajeEnviar');
 
 enviar.addEventListener('submit', function(){ 
   const mensajeNoEnviado = document.createElement('p');
-  mensajeNoEnviado.textContent = '¡Muchas gracias por tu interés! <br> <i class="fa-solid fa-triangle-exclamation"></i> Por el momento este formulario se encuentra fuera de servicio. <i class="fa-solid fa-triangle-exclamation"></i> <br> Para contactarte, podés enviar un correo haciendo click en el ícono de mensje aquí abajo, en la seccion de redes.';
+  const imagenNoEnviado = document.createElement('img');
+  const bloqueErrorMensaje = document.getElementById("falla-mensaje")
+  mensajeNoEnviado.textContent = '¡Muchas gracias por tu interés! <br> <i class="fa-solid fa-triangle-exclamation"></i> <br> Por el momento este formulario se encuentra fuera de servicio. <br> Para contactarte, podés enviar un correo haciendo click en el ícono de mensje aquí abajo, en la seccion de redes.';
+  imagenNoEnviado.src = "https://i.pinimg.com/originals/4d/58/ee/4d58ee3a092e554d6fd6dd29628565ba.gif";
+  imagenNoEnviado.alt = "Error img";
   contactSpan.innerHTML =  mensajeNoEnviado.textContent;
+  bloqueErrorMensaje.append(imagenNoEnviado);
   return false;
 });
 
