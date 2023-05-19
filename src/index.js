@@ -15,25 +15,33 @@ document.addEventListener('DOMContentLoaded', function() {
   form.addEventListener('submit', function(event) {
      event.preventDefault(); // Evita el comportamiento predeterminado del formulario
      var form_data = new FormData(form); // Obtengo los datos del formulario
+     //Acá iría el código para envíar los datos del form.
      return false; // Evita que la página se recargue
   });
 });
 
 /*Para mostrar mensaje de que no se puede enviar el formulario*/
-const enviar = document.getElementById('formulario');
+const formulario = document.getElementById('formulario');
 const contactSpan = document.getElementById('mensajeEnviar');
+const boton = document.getElementById('enviar');
 
-enviar.addEventListener('submit', function(){ 
+formulario.addEventListener('submit', function(){ 
   const mensajeNoEnviado = document.createElement('p');
   const imagenNoEnviado = document.createElement('img');
   const bloqueErrorMensaje = document.getElementById("falla-mensaje")
+
   mensajeNoEnviado.textContent = '¡Muchas gracias por tu interés! <br> <i class="fa-solid fa-triangle-exclamation"></i> <br> Por el momento este formulario se encuentra fuera de servicio. <br> Para contactarte, podés enviar un correo haciendo click en el ícono de mensje aquí abajo, en la seccion de redes.';
   imagenNoEnviado.src = "https://i.pinimg.com/originals/4d/58/ee/4d58ee3a092e554d6fd6dd29628565ba.gif";
   imagenNoEnviado.alt = "Error img";
+
   contactSpan.innerHTML =  mensajeNoEnviado.textContent;
   bloqueErrorMensaje.append(imagenNoEnviado);
+
+  boton.scrollIntoView();
   return false;
 });
+
+
 
 
 

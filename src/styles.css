@@ -302,7 +302,9 @@ form{
   margin: 15px 150px 0 150px;
   font-size: 20px;
 }
-
+#falla-mensaje{
+  padding-top: 100px;
+}
 .redes{
   width: auto;
 }
