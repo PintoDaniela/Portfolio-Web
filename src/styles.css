@@ -195,45 +195,51 @@ nav {
   .apps{
     max-width: 600px;
   }
-  .apps img{
-    visibility: hidden;
-    width: 0;
-  }
-  #pixel-art{
-    height: auto;
-  }
+  
 }
 
 #pixel-art, .apps{
  background-color: rgb(153, 250, 184);
  box-shadow: 5px 5px rgb(158, 148, 243); 
- padding: 20px;
- width: 550px;
- height: 230px;
+ padding: 10px 0;
+ width: 350px;
+ height: 500px;
  text-align: center;
  margin: 20px; 
 }
 
 .content{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  text-align: justify;
+  align-items: center; 
   height: 145px;
 }
 .content div{
   margin: 0 10px;
 }
 .content img{
-  height: 145px;
+  height: 200px;
 }
 
+.proj-parrafo p{
+  text-align: justify;
+  margin: 10px;
+}
+.proj-parrafo h3{
+  width: 350px;
+  padding: 10px 0px;
+  text-align: left;
+  font-size: 18px;
+  background-color: black;
+  color: white;
+}
+
+/*
 #pixel-art img{
   height: 60px;
-  /*margin: 20px;*/
 }
-
+*/
 /*
 .child-2 {
   width: 130px;
