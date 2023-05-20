@@ -17,6 +17,7 @@ body {
     rgb(102, 38, 252),
     rgb(79, 64, 206)
   );
+  position: relative;
 }
 
 h2, h3{
@@ -31,6 +32,7 @@ section {
   justify-content: center;
   flex-wrap: wrap;
   padding: 30px 0px;
+  z-index: 1;
 }
 
 
@@ -38,6 +40,7 @@ header{
   width: 100%;
   height: 100px;
   position: fixed;
+  z-index: 2;
 }
 
 nav {
@@ -114,14 +117,14 @@ nav {
 }
 
 .second-div {
-  width: 300px;
+  width: 350px;
   margin: 30px;
 }
 
 .portada-image {
-  width: 300px;
+  width: 350px;
 }
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 600px){
   .portada-info{
     max-width: 600px;
   }
@@ -137,6 +140,9 @@ nav {
 .my-info, .my-stack, .contacto{
   padding-top: 150px;
   padding-bottom: 150px;
+}
+.my-info h2, .my-stack h2, .contacto h2{
+  text-align: center;
 }
 
 #sobre-mi, #my-projects, #my-stack, #contact-me{
@@ -206,6 +212,12 @@ nav {
  height: 500px;
  text-align: center;
  margin: 20px; 
+ position: relative;
+}
+
+.apps:hover{
+  background-color: rgb(180, 167, 255);
+  margin-top: 10px;
 }
 
 .content{
@@ -234,6 +246,13 @@ nav {
   background-color: black;
   color: white;
 }
+.apps a{ 
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  text-align: right;
+}
+
 
 /*
 #pixel-art img{
@@ -322,8 +341,8 @@ form{
 }
 
 .redes i:hover{
-  margin: 15px;
-  font-size: 30px;
+  margin-top: 10px;
+  /*font-size: 55px;*/
   color: rgb(158, 148, 243);
 }
 
