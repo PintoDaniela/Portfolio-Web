@@ -9,8 +9,11 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  font-family: 'Courier New', Courier, monospace;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  /*font-family: 'Courier New', Courier, monospace;*/
+  /*font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;*/
+  /*font-family:courier,arial,helvética;*/
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
   background-image: linear-gradient(
     to bottom right,
     rgb(158, 148, 243),
@@ -80,6 +83,12 @@ nav {
 .dropdown a{
   color: white;
 }
+.dropdown a li:hover{  
+  background-color: rgb(79, 64, 206,1);  
+}
+.dropdown li:hover{
+  color: rgb(150, 252, 141);  
+}
 
 .hamburger {
   border: 0px;
@@ -117,16 +126,16 @@ nav {
 }
 
 .second-div {
-  width: 350px;
+  width: 360px;
   margin: 30px;
 }
 
 .portada-image {
-  width: 350px;
+  width: 360px;
 }
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 900px){
   .portada-info{
-    max-width: 600px;
+    max-width: 900px;
   }
   .portada-image{
     visibility: hidden;
@@ -141,8 +150,15 @@ nav {
   padding-top: 150px;
   padding-bottom: 150px;
 }
-.my-info h2, .my-stack h2, .contacto h2{
+
+.my-info{
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+.my-info-2 h2, .my-stack h2, .contacto h2{
   text-align: center;
+  
 }
 
 #sobre-mi, #my-projects, #my-stack, #contact-me{
@@ -236,8 +252,9 @@ nav {
 
 .proj-parrafo p{
   text-align: justify;
-  margin: 10px;
+  margin: 10px;  
 }
+
 .proj-parrafo h3{
   width: 350px;
   padding: 10px 0px;
@@ -330,9 +347,7 @@ form{
 #falla-mensaje{
   padding-top: 100px;
 }
-.redes{
-  width: auto;
-}
+
 
 .redes i{
   margin: 15px;
@@ -364,7 +379,7 @@ footer ul{
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;  
+  /*font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;  */
 }
 
 footer li{
