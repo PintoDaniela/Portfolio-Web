@@ -11,11 +11,13 @@ body {
   flex-wrap: wrap;
   
   /*font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  */
+ */
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   
+ 
   background-image: linear-gradient(
     to bottom right,
-    rgb(208, 203, 253),
+    rgb(170, 179, 255),
     rgb(79, 64, 206)
   );
   position: relative;
