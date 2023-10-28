@@ -162,6 +162,7 @@ nav {
 #sobre-mi, #my-projects, #my-stack, #contact-me{
   color: white;
   font-size: 30px;
+  font-weight: lighter;
 }
 
 .info p{
@@ -223,6 +224,11 @@ nav {
   .my-info-2{
     flex-direction: column;
   }
+}
+
+.my-info-2 h3{
+  color: white;  
+  font-size: larger;
 }
 
 #pixel-art, .apps{
