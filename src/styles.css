@@ -1,57 +1,49 @@
 /*GENERAL*/
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html, body{
+  font-size: 18px;
+  background-color: #f5f6f7;
+  min-height: 100vh;
+  width: 100%;
+}
 
 html {
   scroll-behavior: smooth;
 }
 
-body {
-  margin: 0px;
+body {  
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  
-  /*font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
- */
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-   
- 
-  background-image: linear-gradient(
-    to bottom right,
-    rgb(170, 179, 255),
-    rgb(79, 64, 206)
-  );
+  flex-wrap: wrap;  
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;   
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   position: relative;
 }
 
-h2, h3{
-  text-transform: uppercase;
-}
-
-section {
-  width: 100%;
-  background-color: #aad;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 30px 0px;
-  z-index: 1;
-}
-
-
 header{  
   width: 100%;
-  height: 100px;
+  height: auto;
   position: fixed;
   z-index: 2;
+  margin: 0px !important;
+  padding: 0px !important;
 }
 
 nav {
   width: 100%;
-  height: 100px;  
+  height: auto;  
   display: flex;
-  justify-content: end;   
-  background-color: rgb(79, 64, 206);  
+  justify-content: start;   
+  background-color: #9a86ff;    
+  margin: 0px !important;
+  padding: 0px !important;
 }
 
 .dropdown{   
@@ -68,73 +60,64 @@ nav {
   display: flex;
   flex-direction: column;
   font-size:13px; 
-  margin-top: 25px;  
+  margin-top: 25px; 
 }
 
 .nav-bar li {
-  padding: 15px 35px; 
+  padding: 10px 0; 
   color: white;
-  background-color: rgb(79, 64, 206);
   margin: 0px;
   list-style-type: none;
   z-index: 1;
-  font-size: 18px;
-  border: solid 1px rgb(150, 252, 141);
+  font-size: 15px;
+  border-top: solid 1px rgb(79, 64, 206);
 }
-
 .dropdown a{
   color: white;
+  text-decoration-line: none;
 }
 .dropdown a li:hover{  
-  background-color: #aad;  
-  color: black;
+  background-color: #9a86ff;  
+  color: rgb(79, 64, 206);
 
 }
-
 
 .hamburger {
   border: 0px;
   background-color: transparent;
-  color:rgb(158, 148, 243);
-  margin: 25px 25px 5px 5px;  
+  color:#f5f6f7;
+  margin: 25px 25px 0 25px;  
   font-size: 20px;
+  padding: 0px;
 }
 
 .hamburger:hover{
-  color: rgb(150, 252, 141);
+  color: rgb(79, 64, 206);
 }
 
-/*SECTION: Portada*/
-.portada {
-  width: 100%;  
-  margin: 10px 0;
+.portada{
+  margin-top: 120px;
+  margin-bottom: 40px;
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
   align-items: center;
-  padding-top: 100px;  
+  justify-content: center;
+}
+.portada-row {
+  width: 80%;
+  justify-content: center;
+  align-items: center;
 }
 
-.portada-info {
-  max-width: 500px;
-  margin: 30px;
-  font-size: 25px;
-  text-transform: uppercase;
+.portada-image{
+  max-width: 90%;  
 }
 
 #portada-name{
-  color:black;
-  font-size: 50px;
+  color:#05232e;
+  font-weight:inherit;
 }
 
-.second-div {
-  width: 360px;
-  margin: 30px;
-}
-
-.portada-image {
-  width: 380px;
-}
 @media only screen and (max-width: 900px){
   .portada-info{
     max-width: 900px;
@@ -145,14 +128,21 @@ nav {
   }
 }
 
+/*SECTION*/
+section {
+  width: 100%;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 30px 0px;
+  z-index: 1;
+}
 
-
-/* SECTION: MY INFO */
 .my-info, .my-stack, .contacto{
   padding-top: 100px;
   padding-bottom: 100px;
 }
-
 
 .my-info-2 h2, .my-stack h2, .contacto h2{
   text-align: center;
@@ -160,32 +150,43 @@ nav {
 }
 
 #sobre-mi, #my-projects, #my-stack, #contact-me{
-  color: white;
+  color:#05232e;
   font-size: 30px;
   font-weight: lighter;
+}
+
+/* SECTION: MY INFO */
+.my-info{
+  background-color:#05232e;
+  width: 80% !important;
+  align-self: center;
+  justify-self: center;
 }
 
 .info p{
   color:white;
   font-size: 17px;
   line-height: 25px;
+  font-weight: lighter;
 }
 
 .info {
   max-width: 500px;
   font-weight: inherit;
   margin: 30px;
+  background-color: #05232e;
 }
 
 .avatar {
-  width: 250px;
-  border-radius: 125px;
+  height: 250px;
+  border-radius: 50%;
+  border: 4px solid #EEBBC3;
 }
 
 .my-stack section{
   width: 60%;
 }
-
+/* 
 .my-stack div{
   width: 100px;
   height: 100px;
@@ -214,7 +215,32 @@ nav {
   color: rgb(158, 148, 243);
   font-size: 75px;
   margin: 20px;
+} */
+
+
+.container-mi-stack, .container-proyectos{
+  margin: 220px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  
 }
+.iconos-mi-stack {
+  margin: 20px 0;
+  font-size: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; 
+  width: 80%;  
+  justify-content: center;  
+}
+.iconos-mi-stack iconify-icon{
+  margin: 15px;
+}
+
 
 /*MY PROJECTS*/
 @media only screen and (max-width: 600px){
@@ -235,7 +261,7 @@ nav {
  background-color: rgb(153, 250, 184);
  box-shadow: 5px 5px rgb(158, 148, 243); 
  padding: 10px 0;
- width: 300px;
+ width: 320px;
  height: 450px;
  text-align: center;
  margin: 20px; 
@@ -263,10 +289,14 @@ nav {
   height: 180px;
 }
 
+/* .proj-parrafo{
+  overflow: hidden;  
+} */
 .proj-parrafo p{
   text-align: left;
   margin: 10px; 
-  font-size: 16px; 
+  font-size: 14px; 
+  overflow: hidden;
 }
 
 .proj-parrafo h3{
@@ -312,7 +342,7 @@ form{
 }
 
 .contacto label{
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-size: 20px;
 }
  .contacto button{
@@ -367,7 +397,6 @@ form{
 
 .redes h3{
   font-size: 20px;
-  color: white;
   font-weight: lighter;
 }
 
@@ -377,12 +406,16 @@ form{
   
 }
 /*FOOTER*/
+footer{
+  background-color: #05232e;
+  padding-top: 20px;
+}
 
 footer ul{
   justify-content: space-around;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: center;  
 }
 
 footer li{
@@ -391,7 +424,8 @@ footer li{
 }
 
 footer a {
-  color: white;
+  color:#f5f6f7;
+  text-decoration: none;
 }
 
 footer a:hover {

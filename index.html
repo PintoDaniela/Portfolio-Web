@@ -1,24 +1,18 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="src/styles.css" />
-    <script src="https://kit.fontawesome.com/db587d8235.js" crossorigin="anonymous"></script>
+  <head>    
     <title>Daniela Pinto</title>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://kit.fontawesome.com/db587d8235.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   </head>
   <body>
     <header>
       <nav>            
-        <ul class="dropdown">         
-          <li>
-            <ul class="nav-bar" id="nav-list">
-              <a href="#inicio"><li>INICIO</li></a> 
-              <a href="#about-me"><li>SOBRE MÍ</li></a>
-              <a href="#my-projects"><li>MIS PROYECTOS</li></a>
-              <a href="#contact-me"><li>CONTACTAME</li></a>
-            </ul>         
-          </li>   
+        <ul class="dropdown">  
           <li>    
             <div>
               <button class="hamburger" id="hamburger">
@@ -26,11 +20,19 @@
               </button>
               <h4 id="menu"></h4>
             </div> 
-          </li> 
+          </li>        
+          <li>
+            <ul class="nav-bar" id="nav-list">
+              <a href="#"><li>INICIO</li></a> 
+              <a href="#about-me"><li>SOBRE MÍ</li></a>
+              <a href="#my-projects"><li>MIS PROYECTOS</li></a>
+              <a href="#contact-me"><li>CONTACTAME</li></a>
+            </ul>         
+          </li>            
         </ul>        
       </nav>
     </header>
-    <div class="portada" id="inicio">
+    <!-- <div class="portada" id="inicio">
       <div class="portada-info">
         <h2 id="portada-name">Daniela Pinto</h2>  
         <p><i class="fa-solid fa-rocket"></i>&nbsp;Programadora</p>   
@@ -42,33 +44,54 @@
           alt="Ovni image"
         />
       </div>            
+    </div> -->
+
+    <div class="portada" id="inicio">
+      <div class="row portada-row">
+        <div class="col-6 portada-info">
+          <h2 id="portada-name">Daniela Pinto</h2>  
+          <p><i class="fa-solid fa-rocket"></i>&nbsp;Programadora</p> 
+        </div>
+        <div class="col-6 portada-image">
+          <img
+            class="portada-image"
+            src="images/ovni-dino.png"
+            alt="Ovni image"
+          />
+        </div>
+      </div>        
     </div>
       
     <section class="my-info" id="about-me">
       <div class="about-me">
           <img
             class="avatar"
-            src="images/foto-perfil.jpeg"
+            src="images/perfil-linkedin.jpeg"
             alt="Daniela Pinto"
           />
       </div>
       <div class="info">
-          <h2 id="sobre-mi"><i class="fa-solid fa-user-astronaut" style="margin-right: 20px;"></i>Sobre mí</h2>             
+          <h2 id="sobre-mi"><i class="fa-solid fa-user-astronaut" style="margin-right: 20px;"></i>Sobre mí</h2>  
           <p>
-            Soy desarrolladora de software y estudiante de la Tecnicatura Universitaria en Programación en la Universidad Tecnológica Nacional.
-            Disfruto del trabajo en equipo y de aprender cosas nuevas, apuntando siempre a mejorar mis prácticas y a ampliar mis conocimientos de manera proactiva.
-            <br>
-            Antes de comenzar mi carrera en tecnología, me formé y ejercí como Técnica de Laboratorio, especializándome en el área de bacteriología clínica, y actualmente me desempeño como desarrolladora back-end .NET.
+            ¡Hola! Soy Daniela y soy desarrolladora de software.
+          </p>           
+          <p>
+            En 2023 me gradué como Técnica Universitaria en Programación en la Universidad Tecnológica Nacional (UTN) y en la actualidad me desempeño principalmente como desarrolladora Back-End.
+          </br>
+            Me gusta trabajar en equipo y aprender cosas nuevas, apuntando siempre a mejorar mis prácticas y a ampliar mis conocimientos de manera proactiva.
+          </p>
+          <p>
+            Antes de comenzar mi carrera en tecnología, me formé y ejercí como Técnica de Laboratorio, especializándome en el área de bacteriología clínica.
           </p>
       </div>  
     </section>
     
     <section class="my-stack">
       <section>
-        <h2 id="my-stack">Tecnologías&nbsp;y Lenguajes de Programación</h2>
+        <h2 id="my-stack">Herramientas y tecnología</h2>
       </section>      
       <section>   
-        <div>
+        <!-- <div>
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/300px-ISO_C%2B%2B_Logo.svg.png" alt="C++ logo">
         </div>     
         <div>
@@ -110,7 +133,26 @@
         </div> 
         <div>
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/113px-Visual_Studio_Code_1.35_icon.svg.png" alt="Visual Studio Code logo">
-        </div>  
+        </div>   -->
+        <div class="iconos-mi-stack">          
+          <iconify-icon icon="vscode-icons:file-type-cpp3"></iconify-icon>          
+          <iconify-icon icon="vscode-icons:file-type-csharp2"></iconify-icon>
+          <iconify-icon icon="skill-icons:dotnet"></iconify-icon>
+          <iconify-icon icon="devicon:dotnetcore"></iconify-icon> 
+          <iconify-icon icon="logos:python"></iconify-icon>
+          <iconify-icon icon="devicon:microsoftsqlserver"></iconify-icon>
+          <iconify-icon icon="logos:mysql"></iconify-icon>
+          <iconify-icon icon="logos:html-5"></iconify-icon>
+          <iconify-icon icon="logos:css-3"></iconify-icon>
+          <iconify-icon icon="vscode-icons:file-type-js-official"></iconify-icon>
+          <iconify-icon icon="logos:bootstrap"></iconify-icon>
+          <iconify-icon icon="vscode-icons:file-type-vscode"></iconify-icon>
+          <iconify-icon icon="devicon:visualstudio"></iconify-icon>          
+          <iconify-icon icon="skill-icons:github-dark"></iconify-icon>
+          <iconify-icon icon="devicon:postman"></iconify-icon>
+          <iconify-icon icon="logos:swagger"></iconify-icon>
+          <iconify-icon icon="logos:jwt-icon"></iconify-icon>
+        </div>
         
       </section>
       <!--
@@ -353,7 +395,7 @@
     <footer>  
       <div>
         <ul class="menu-footer">
-          <li><a href="#inicio">INICIO</a></li> 
+          <li><a href="#">INICIO</a></li> 
           <li><a href="#about-me">SOBRE MÍ</a></li>
           <li><a href="#my-projects">MIS PROYECTOS</a></li>
           <li><a href="#contact-me">CONTACTAME</a></li>
@@ -368,5 +410,9 @@
      -->                  
     </footer>
     <script src="src/index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
   </body>
 </html>
