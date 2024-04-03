@@ -146,13 +146,11 @@ section {
 
 .my-info-2 h2, .my-stack h2, .contacto h2{
   text-align: center;
-  
 }
 
 #sobre-mi, #my-projects, #my-stack, #contact-me{
   color:#05232e;
-  font-size: 30px;
-  font-weight: lighter;
+  font-size: 2.0rem;
 }
 
 /* SECTION: MY INFO */
@@ -252,24 +250,25 @@ section {
   }
 }
 
-.my-info-2 h3{
-  color: white;  
-  font-size: larger;
+.my-info-2 h3{  
+  font-size: 1.7rem;
+  color:#05232e;
+  font-weight: lighter;
 }
 
 #pixel-art, .apps{
- background-color: rgb(153, 250, 184);
- box-shadow: 5px 5px rgb(158, 148, 243); 
+ background-color: #9a86ff; 
  padding: 10px 0;
  width: 320px;
  height: 450px;
  text-align: center;
  margin: 20px; 
  position: relative;
-}
+ border-radius: 10px;
+ }
 
 .apps:hover{
-  background-color: rgb(180, 167, 255);
+  background-color:#826dee;
   margin-top: 10px;
 }
 
@@ -297,15 +296,16 @@ section {
   margin: 10px; 
   font-size: 14px; 
   overflow: hidden;
+  color: #f5f6f7;
 }
 
 .proj-parrafo h3{
-  width: 300px;
+  width: 100%;
   padding: 10px 0px;
   text-align: center;
   font-size: 18px;
-  background-color: rgb(79, 64, 206);
-  color: white; 
+  background-color:#05232e;
+  color:#EEBBC3; 
   
 }
 .apps a{ 
@@ -314,9 +314,13 @@ section {
   left: 15px;
   text-align: right;
   font-weight: bold;
+  color:#05232e;
+  text-decoration: none;
+  font-weight: lighter;
+}
+.apps a:hover{
   color: rgb(98, 85, 220);
 }
-
 
 a {
   text-decoration: none;
@@ -348,7 +352,7 @@ form{
  .contacto button{
   width: 120px;
   height: 60px;
-  background-color: rgba(141, 252, 141, 0.9);
+  background-color:#EEBBC3;
   margin: 10px;
   box-shadow: 5px 5px rgb(158, 148, 243);   
   border: 0px;
@@ -386,13 +390,13 @@ form{
 .redes i{
   margin: 15px;
   font-size: 50px;
-  color: rgb(153, 250, 184);
+  color:#EEBBC3;
 }
 
 .redes i:hover{
   margin-top: 10px;
   /*font-size: 55px;*/
-  color: rgb(158, 148, 243);
+  color:#9a86ff;
 }
 
 .redes h3{
@@ -429,11 +433,11 @@ footer a {
 }
 
 footer a:hover {
-  color: rgb(150, 252, 141);
+  color:#EEBBC3;
 }
 
 a:active {
-  color: rgb(150, 252, 141);
+  color:#EEBBC3;
 }
 
 
