@@ -257,7 +257,7 @@ section {
 }
 
 #pixel-art, .apps{
- background-color: #9a86ff; 
+ background-color:#05232e; 
  padding: 10px 0;
  width: 320px;
  height: 450px;
@@ -268,7 +268,7 @@ section {
  }
 
 .apps:hover{
-  background-color:#826dee;
+  /* background-color:rgb(79, 64, 206); */
   margin-top: 10px;
 }
 
@@ -286,6 +286,7 @@ section {
 }
 .content img{
   height: 180px;
+  background-color: #9a86ff;
 }
 
 /* .proj-parrafo{
@@ -314,12 +315,12 @@ section {
   left: 15px;
   text-align: right;
   font-weight: bold;
-  color:#05232e;
+  color:#9a86ff;
   text-decoration: none;
   font-weight: lighter;
 }
 .apps a:hover{
-  color: rgb(98, 85, 220);
+  color:#EEBBC3;
 }
 
 a {
@@ -378,9 +379,7 @@ form{
   font-size: 20px;
 }
 
-@media only screen and(max-){
-  
-}
+
 
 #falla-mensaje{
   padding-top: 100px;
@@ -440,4 +439,8 @@ a:active {
   color:#EEBBC3;
 }
 
-
+@media only screen and (max-width: 600px){
+  footer{
+    display: none;
+  }
+}
