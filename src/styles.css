@@ -260,7 +260,7 @@ section {
  background-color:#05232e; 
  padding: 10px 0;
  width: 320px;
- height: 450px;
+ height: 470px;
  text-align: center;
  margin: 20px; 
  position: relative;
@@ -271,43 +271,36 @@ section {
   /* background-color:rgb(79, 64, 206); */
   margin-top: 10px;
 }
-
 .content{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center; 
-  height: 145px;
+  align-items: center;   
 }
 .content div{
   margin: 0 10px;
   width: 100%;
-
 }
 .content img{
   height: 180px;
   background-color: #9a86ff;
 }
-
-/* .proj-parrafo{
-  overflow: hidden;  
-} */
-.proj-parrafo p{
-  text-align: left;
-  margin: 10px; 
-  font-size: 14px; 
-  overflow: hidden;
-  color: #f5f6f7;
-}
-
 .proj-parrafo h3{
   width: 100%;
-  padding: 10px 0px;
+  padding: 10px 0;
   text-align: center;
   font-size: 18px;
   background-color:#05232e;
-  color:#EEBBC3; 
-  
+  color:#EEBBC3;   
+}
+.proj-parrafo p{
+  text-align: left;
+  margin: 0px 10px;
+  font-size: 14px; 
+  color: #f5f6f7;
+  /* height: 160px;
+  overflow-y: hidden; 
+  text-overflow: ellipsis;*/
 }
 .apps a{ 
   position: absolute;
@@ -399,7 +392,7 @@ form{
 }
 
 .redes h3{
-  font-size: 20px;
+  font-size: 22px;
   font-weight: lighter;
 }
 
