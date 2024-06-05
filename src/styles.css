@@ -72,10 +72,12 @@ nav {
   font-size: 15px;
   border-top: solid 1px rgb(79, 64, 206);
 }
+
 .dropdown a{
   color: white;
   text-decoration-line: none;
 }
+
 .dropdown a li:hover{  
   background-color: #9a86ff;  
   color: rgb(79, 64, 206);
@@ -86,13 +88,25 @@ nav {
   border: 0px;
   background-color: transparent;
   color:#f5f6f7;
-  margin: 25px 25px 0 25px;  
+  margin: 25px 25px 0 15px;
   font-size: 20px;
   padding: 0px;
 }
 
 .hamburger:hover{
   color: rgb(79, 64, 206);
+}
+
+#menu-icon{
+  width: 45px;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: #f5f6f7;  
+  margin: auto;
+}
+
+#menu-icon:hover{
+  background-color: rgb(79, 64, 206);
 }
 
 .portada{
@@ -407,11 +421,12 @@ footer{
   padding-top: 20px;
 }
 
-footer ul{
+footer ul, .btn-footer{
   justify-content: space-around;
   display: flex;
   flex-direction: row;
   align-items: center;  
+  
 }
 
 footer li{
@@ -430,6 +445,18 @@ footer a:hover {
 
 a:active {
   color:#EEBBC3;
+}
+
+.btn-custom{
+  background-color: #EEBBC3 !important;
+  color: #05232e !important;
+  border: 0px !important;
+  margin: 15px 0;
+
+}
+.btn-custom:hover{
+  background-color: #9a86ff !important;
+  box-shadow: 2px 1px #EEBBC3;
 }
 
 @media only screen and (max-width: 600px){
