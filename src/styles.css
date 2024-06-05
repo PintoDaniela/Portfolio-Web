@@ -252,6 +252,28 @@ section {
 .iconos-mi-stack iconify-icon{
   margin: 15px;
 }
+.skills-list{
+  color:#9a86ff;
+  width: 100%;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+}
+.skills-list ul{
+  text-align: center;
+  list-style: none;
+}
+.skills-list .row{
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 1100px){
+  .skills-list .col-6{
+    width: 100%;
+  }
+}
+
 
 
 /*MY PROJECTS*/
