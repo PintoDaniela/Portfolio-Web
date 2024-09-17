@@ -23,11 +23,11 @@
           </li>        
           <li>
             <ul class="nav-bar" id="nav-list">
-              <a href="#"><li>INICIO</li></a> 
-              <a href="#about-me"><li>SOBRE MÍ</li></a>
-              <a href="#my-stack"><li>APTITUDES TÉCNICAS</li></a>
-              <a href="#my-projects"><li>MIS PROYECTOS</li></a>
-              <a href="#contact-me"><li>CONTACTAME</li></a>  
+              <a href="#"><li>INDEX</li></a> 
+              <a href="#about-me"><li>ABOUT ME</li></a>
+              <a href="#my-stack"><li>TECHNICAL SKILLS</li></a>
+              <a href="#my-projects"><li>MY PROJECTS</li></a>
+              <a href="#contact-me"><li>CONTACT ME</li></a>  
             </ul>         
           </li>            
         </ul>        
@@ -38,7 +38,7 @@
       <div class="row portada-row">
         <div class="col-6 portada-info">
           <h2 id="portada-name">Daniela Pinto</h2>  
-          <p><i class="fa-solid fa-rocket"></i>&nbsp;Programadora</p> 
+          <p><i class="fa-solid fa-rocket"></i>&nbsp;Programmer</p> 
         </div>
         <div class="col-6 portada-image">
           <img
@@ -58,7 +58,7 @@
             alt="Daniela Pinto"
           />
       </div>
-      <div class="info">
+      <div class="info spanish" style="display: none;">
           <h2 id="sobre-mi"><i class="fa-solid fa-user-astronaut" style="margin-right: 20px;"></i>Sobre mí</h2>  
           <p>
             ¡Hola! Soy Daniela y soy desarrolladora de software.
@@ -72,11 +72,27 @@
             Antes de comenzar mi carrera en tecnología, me formé y ejercí como Técnica de Laboratorio, especializándome en el área de bacteriología clínica.
           </p>
       </div>  
+      <div class="info english">
+        <h2 id="sobre-mi"><i class="fa-solid fa-user-astronaut" style="margin-right: 20px;"></i>Sobre mí</h2>  
+        <p>
+          Hi! I'm Daniela and I'm a software developer.
+        </p>           
+        <p>
+          I graduated in 2023 with a University Technician degree in Programming from Argentina's  the National Technological University (UTN), and I'm currently working as a Full Stack .NET Developer.
+          </br>
+          I’m passionate about teamwork and always eager to learn new things, aiming to improve my skills and expand my knowledge in a proactive way.
+        </p>
+        <p>
+          A little more about my background...
+          <br>
+          Before transitioning into the tech field, I studied and worked as a Laboratory Technician, specializing in clinical bacteriology.
+        </p>
+    </div>  
     </section>
     
     <section class="my-stack">
       <section>
-        <h2 id="my-stack">Herramientas y tecnología</h2>
+        <h2 id="my-stack">Skills</h2>
       </section>      
       <section>          
         <div class="iconos-mi-stack">          
@@ -128,39 +144,14 @@
             </div>            
           </div>
         </div>
-      </section>
-      <!--
-      <section>
-        <iconify-icon icon="akar-icons:html-fill"></iconify-icon>
-        <iconify-icon icon="akar-icons:css-fill"></iconify-icon>
-        <iconify-icon icon="ri:javascript-fill"></iconify-icon>
-        <iconify-icon icon="bxl:c-plus-plus"></iconify-icon>
-        <iconify-icon icon="teenyicons:c-sharp-solid"></iconify-icon>
-        <iconify-icon icon="simple-icons:dotnet"></iconify-icon>
-        <iconify-icon icon="bi:filetype-sql"></iconify-icon>
-        <iconify-icon icon="devicon-plain:python-wordmark"></iconify-icon>
-      </section>
-      <section>    
-        <iconify-icon icon="skill-icons:git"></iconify-icon>
-        <iconify-icon icon="raphael:github"></iconify-icon>
-        <iconify-icon icon="logos:visual-studio-code"></iconify-icon>
-        <iconify-icon icon="logos:visual-studio"></iconify-icon>  
-      --> 
-      <!-- Estos tres estám repetidos: 
-        <iconify-icon icon="mdi:github"></iconify-icon>
-        <iconify-icon icon="mdi:git"></iconify-icon>
-        <iconify-icon icon="logos:github-octocat"></iconify-icon>
-      -->
-      <!--          
-      </section>   
-       -->     
+      </section>      
     </section>
     
     <section class="my-info-2">
-      <h2 id="my-projects">Algunos de mis Proyectos</h2>
+      <h2 id="my-projects">Some of my projects</h2>
      
       <section>
-        <h3>Proyectos personales</h3>
+        <h3>Personal projects</h3>
       </section>
         <section class="projects">   
           <div class="apps">          
@@ -169,11 +160,11 @@
                 <img src="images/netcore-docs.png" alt="foto netcore docs">
               </div>
               <div class="proj-parrafo">
-                <h3>Guías ASP.NET Core</h3>
+                <h3>ASP.NET Core guides</h3>
                 <p>
-                  Este proyecto front-end es una página de documentación, que incluye algunas guías para el desarrollo de APIs con ASP.NET Core 6 en adelante.<br>                
+                  This front-end project is a documentation page that includes several guides for API development using ASP.NET Core 6 and beyond.                  <br>                
                 </p>
-                <a href="https://pintodaniela.github.io/aspnetcore-docs/index.html" target="_blank"><i class="fa-brands fa-github"></i>&nbsp; IR AL SITIO WEB</a>
+                <a href="https://pintodaniela.github.io/aspnetcore-docs/index.html" target="_blank"><i class="fa-brands fa-github"></i>&nbsp; VISIT THE WEBSITE</a>
               </div>
             </div>  
           </div>        
@@ -185,10 +176,12 @@
               <div class="proj-parrafo">
                 <h3>Tres Empanadas App</h3>
                 <p>
-                  Aplicación MVC desarrollada en C# con ASP.NET Core, destinada al armado de pedidos para comprar empanadas entre varias personas.<br>
-                  Permite que cada usuario realice su pedido individual y luego se consolidan los pedidos en un único listado para efectuar la compra grupalmente.<br> 
-                  La app emplea el sistema de autenticación JWT.    
-                                                  
+                  An MVC application developed in C# with ASP.NET Core, designed to organize group orders for empanadas.
+                  <br>
+                  Each user can place their individual order, and the app consolidates all orders into a single list for group purchasing.
+                  <br>
+                  The app uses JWT authentication.
+                  <br>                                                  
                 </p>
                 <a href="https://github.com/PintoDaniela/PedidoEmpanadas-ASP.NET_Core_MVC" target="_blank"><i class="fa-brands fa-github"></i>&nbsp; VER REPO</a>
               </div>
@@ -201,11 +194,16 @@
                 <img src="images/ElPortal.png" alt="foto web API">
               </div>
               <div class="proj-parrafo">
-                <h3>REST API - Librería El Portal</h3>
+                <h3>REST API - El Portal Bookstore</h3>
                 <p>
-                  REST API desarrollada en C# con ASP.NET Core 6. <br> Es un proyecto desarrollado con enfoque DB First, que tiene como finalidad gestionar el acceso a la base de datos desde una Aplicación MVC. <br>La API utiliza Swagger como herramienta de documentación interactiva.<br>                
+                  REST API developed in C# with ASP.NET Core 6.
+                  <br>
+                  This is a DB First approach project, aimed at managing database access from an MVC application.
+                  <br>
+                  The API uses Swagger as an interactive documentation tool.
+                  <br>
                 </p>
-                <a href="https://github.com/PintoDaniela/LibreriaElPortal-WebAPI" target="_blank"><i class="fa-brands fa-github"></i>&nbsp; VER REPO</a>
+                <a href="https://github.com/PintoDaniela/LibreriaElPortal-WebAPI" target="_blank"><i class="fa-brands fa-github"></i>&nbsp; VISIT REPOSITORY</a>
               </div>
             </div>  
           </div> 
@@ -215,17 +213,20 @@
                 <img src="images/calculadora-pf.png" alt="calculadora foto">
               </div>
               <div class="proj-parrafo">
-                <h3>Calculadora de ahorros</h3>
-                <p>
-                  Éste fue el primer proyecto que realicé al entrar en contacto con el mundo de la programación 🌱 <br> La comparto como un recuerdo de aquel primer pasito dentro de este gran camino.<br>                
+                <h3>Savings Calculator</h3>
+                 <p>
+                  This was the first project I worked on when I first stepped into the world of programming 🌱
+                  <br>
+                  I'm sharing it as a reminder of that first small step on this amazing journey.
+                  <br>
                 </p>
-                <a href="pages/calculadora.html" target="_blank"><i class="fa-sharp fa-solid fa-flask"></i> &nbsp;CALCULAR</a>
+                <a href="pages/calculadora.html" target="_blank"><i class="fa-sharp fa-solid fa-flask"></i> &nbsp;CALCULATE</a>
               </div>
             </div>
           </div>           
         </section>
         <section>
-          <h3>Proyectos dentro del marco académico</h3>
+          <h3>University Coursework Projects</h3>
         </section>      
         <section class="projects">
           <div class="apps">          
@@ -236,9 +237,12 @@
               <div class="proj-parrafo">
                 <h3>WinForms App</h3>
                 <p>
-                  Trabajo colaborativo realizado en Programación 3 de la Tecnicatura Universitaria en Programación (UTN).<br>Aplicación de escritorio para ABM (CRUD) de artículos, desarrollada en C# con .NET Framework. <br>
+                  Collaborative project completed in Programming 3 of the University Technician in Programming (UTN) program.
+                  <br>
+                  Desktop application for ABM (CRUD) of items, developed in C# with .NET Framework.
+                  <br>
                 </p>
-                <a href="https://github.com/PintoDaniela/tp-winform-equipo-3" target="_blank"><i class="fa-brands fa-github"></i>&nbsp; VER REPO</a>
+                <a href="https://github.com/PintoDaniela/tp-winform-equipo-3" target="_blank"><i class="fa-brands fa-github"></i>&nbsp;VISIT REPOSITORY</a>
               </div>
             </div>
           </div> 
@@ -248,17 +252,20 @@
                 <img src="images/gestion-parque.jpg" alt="parque jurasico foto">
               </div>
               <div class="proj-parrafo">
-                <h3>Sistema de Gestión</h3>
+                <h3>Management System</h3>
                 <p>
-                  Aplicación de consola desarrollada en C++ durante la cursada de Laboratorio de Computación 2 de la Tecnicatura Universitaria en Programación (UTN). <br>El programa está destinado a la gestión de un parque de aventuras ficticio, llamado Parque Jurásico.  <br>              
+                  Console application developed in C++ during the Computer Lab 2 course of the University Technician in Programming (UTN) program.
+                  <br>
+                  The program is designed to manage a fictional adventure park.
+                  <br>
                 </p>
-                <a href="https://github.com/PintoDaniela/Sistema_de_Gestion" target="_blank"><i class="fa-brands fa-github"></i>&nbsp; VER REPO</a>
+                <a href="https://github.com/PintoDaniela/Sistema_de_Gestion" target="_blank"><i class="fa-brands fa-github"></i>&nbsp;VISIT REPOSITORY</a>
               </div>
             </div>
           </div>
         </section>
         <section>
-          <h3>Random</h3>
+          <h3>Random staff</h3>
         </section>
           <section class="projects">
             <div class="apps">          
@@ -268,9 +275,9 @@
                 </div>
                 <div class="proj-parrafo">
                   <h3>pixel art</h3>
-                  <p>
-                    Imágenes creadas con técnica de pixel-art. <br>
-                    Algunas de ellas fueron diseñadas para ser empleadas en algunos de los proyectos que les comparto en este portfolio.
+                  <p> Images created using pixel art techniques.
+                    <br>
+                    Some of these were designed to be used in some of the projects shared in this portfolio.
                   </p>
                 </div>
               </div>                  
@@ -282,11 +289,12 @@
                 </div>
                 <div class="proj-parrafo">
                   <h3>Memo test</h3>
-                  <p>
-                    Memory game realizado con HTML, CSS y JavaScript. <br>
-                    El proyecto fue desarrollado durante un curso de JavaScript impartido por Ania Kubow (FreeCodeCamp). <br>                
+                  <p> Memory game created with HTML, CSS, and JavaScript.
+                    <br>
+                    The project was developed during a JavaScript course taught by Ania Kubow (FreeCodeCamp).
+                    <br>
                   </p>
-                  <a href="pages/memo-game.html" target="_blank"><i class="fa-solid fa-gamepad"></i>&nbsp; JUGAR</a>
+                  <a href="pages/memo-game.html" target="_blank"><i class="fa-solid fa-gamepad"></i>&nbsp;PLAY</a>
                 </div>
               </div>
             </div>   
@@ -296,11 +304,14 @@
                   <img src="images/piano.png" alt="piano foto">
                 </div>
                 <div class="proj-parrafo">
-                  <h3>Piano</h3>
+                  <h3>HTML and CSS Piano</h3>
                   <p>
-                    Proyecto realizado durante el Curso "Responsive Web Design" de FreeCodeCamp, usando HTML y CSS. <br> El mismo se ajusta al tamaño de la pantalla de manera dinámica. <br>                
+                    Project completed during the "Responsive Web Design" course from FreeCodeCamp, using HTML and CSS.
+                    <br>
+                    It dynamically adjusts to the screen size.
+                    <br>
                   </p>
-                  <a href="https://pintodaniela.github.io/Piano/" target="_blank"><i class="fa-solid fa-music"></i>&nbsp; VER PIANO</a>
+                  <a href="https://pintodaniela.github.io/Piano/" target="_blank"><i class="fa-solid fa-music"></i>&nbsp;SEE THE PIANO PAGE</a>
                 </div>
               </div>  
             </div>
@@ -312,17 +323,17 @@
                 <div class="proj-parrafo">   
                   <h3>Budget App</h3>         
                   <p>
-                    Aplicación desarrollada en Python que permite visualizar análisis de presupuestos en formato de tabla y gráfico de barras. <br>
-                    Éste proyecto fue realizado en el marco del curso "Scientific Computing with Python" de FreeCodeCamp. <br>
+                    Application developed in Python that allows for budget analysis visualization in both table and bar chart formats.
+                    <br>
+                    This project was completed as part of the "Scientific Computing with Python" course from FreeCodeCamp.
+                    <br>
                   </p>
-                  <a href="https://github.com/PintoDaniela/budget_app" target="_blank"><i class="fa-brands fa-github"></i>&nbsp; VER REPO</a>
+                  <a href="https://github.com/PintoDaniela/budget_app" target="_blank"><i class="fa-brands fa-github"></i>&nbsp;VISIT REPOSITORY</a>
                 </div>
               </div>
-            </div>
-          
+            </div>          
           </section>
-          </section>
-     
+        </section>     
     </section> 
 <!--
  <section class="contacto">
@@ -357,13 +368,13 @@
     </section>
 -->
     <section class="redes">      
-      <h3>... Más proyectos en GitHub</h3>
+      <h3>... More projects on GitHub</h3>
       <section>
         <a href="https://github.com/PintoDaniela" target="_blank"><i class="fa-brands fa-github" ></i></a>
       </section>  
     </section>
     <section class="redes">      
-      <h3 id="contact-me">Contactame </h3>
+      <h3 id="contact-me">Contact me</h3>
       <section>
         <a href="https://www.linkedin.com/in/daniela-pinto-818982137/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
         <a href="mailto:danielafpinto90@gmail.com"><i class="fa-regular fa-paper-plane"></i></a>
@@ -373,23 +384,22 @@
     <footer>  
       <div>
         <ul class="menu-footer">
-          <li><a href="#">INICIO</a></li> 
-          <li><a href="#about-me">SOBRE MÍ</a></li>
-          <li><a href="#my-projects">MIS PROYECTOS</a></li>
-          <li><a href="#contact-me">CONTACTAME</a></li>
+          <a href="#"><li>INDEX</li></a> 
+          <a href="#about-me"><li>ABOUT ME</li></a>
+          <a href="#my-stack"><li>TECHNICAL SKILLS</li></a>
+          <a href="#my-projects"><li>MY PROJECTS</li></a>
+          <a href="#contact-me"><li>CONTACT ME</li></a>
         </ul> 
-     </div>    
+     </div> 
      
-    
-      <div class="btn-footer">        
-        <a href="#"><div class="btn btn-primary btn-custom">Volver al inicio</div></a>
-      </div>
-                     
+    <div class="btn-footer">        
+      <a href="#"><div class="btn btn-primary btn-custom">Back to the top</div></a>
+    </div>   
+                      
     </footer>
     <script src="src/index.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-
   </body>
 </html>
