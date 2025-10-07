@@ -41,7 +41,7 @@ nav {
   height: auto;  
   display: flex;
   justify-content: start;   
-  background-color: #7e6ae2;    
+  background-color: #9a86ff;    
   margin: 0px !important;
   padding: 0px !important;
 }
@@ -79,7 +79,7 @@ nav {
 }
 
 .dropdown a li:hover{  
-  background-color: #7e6ae2;  
+  background-color: #9a86ff;  
   color: rgb(79, 64, 206);
 
 }
@@ -253,7 +253,7 @@ section {
   margin: 15px;
 }
 .skills-list{
-  color:#7e6ae2;
+  color:#9a86ff;
   width: 100%;
   display: flex; 
   align-items: center;
@@ -319,7 +319,7 @@ section {
 }
 .content img{
   height: 180px;
-  background-color: #7e6ae2;
+  background-color: #9a86ff;
 }
 .proj-parrafo h3{
   width: 100%;
@@ -344,7 +344,7 @@ section {
   left: 15px;
   text-align: right;
   font-weight: bold;
-  color:#7e6ae2;
+  color:#9a86ff;
   text-decoration: none;
   font-weight: lighter;
 }
@@ -424,7 +424,7 @@ form{
 .redes i:hover{
   margin-top: 10px;
   /*font-size: 55px;*/
-  color:#7e6ae2;
+  color:#9a86ff;
 }
 
 .redes h3{
@@ -477,7 +477,7 @@ a:active {
 
 }
 .btn-custom:hover{
-  background-color: #7e6ae2 !important;
+  background-color: #9a86ff !important;
   box-shadow: 2px 1px #EEBBC3;
 }
 
