@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>    
     <title>Daniela Pinto</title>
     <meta charset="UTF-8" />
@@ -8,8 +8,35 @@
     <script src="https://kit.fontawesome.com/db587d8235.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      .lang-toggle-btn {
+        position: fixed;
+        top: 16px;
+        right: 20px;
+        z-index: 9999;
+        background: transparent;
+        border: 2px solid currentColor;
+        border-radius: 20px;
+        padding: 4px 14px;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        cursor: pointer;
+        transition: background 0.2s, color 0.2s;
+      }
+      .lang-toggle-btn:hover {
+        background: rgba(128,128,128,0.15);
+      }
+      .info h2{
+        color: aliceblue;
+      }
+    </style>
   </head>
   <body>
+
+    <!-- Botón de idioma -->
+    <button class="lang-toggle-btn" id="lang-toggle" onclick="toggleLang()">EN</button>
+
     <header>
       <nav>            
         <ul class="dropdown">  
@@ -23,11 +50,11 @@
           </li>        
           <li>
             <ul class="nav-bar" id="nav-list">
-              <a href="#"><li>INDEX</li></a> 
-              <a href="#about-me"><li>ABOUT ME</li></a>
-              <a href="#my-stack"><li>TECHNICAL SKILLS</li></a>
-              <a href="#my-projects"><li>MY PROJECTS</li></a>
-              <a href="#contact-me"><li>CONTACT ME</li></a>  
+              <a href="#"><li data-i18n="nav.index">INICIO</li></a> 
+              <a href="#about-me"><li data-i18n="nav.about">SOBRE MÍ</li></a>
+              <a href="#my-stack"><li data-i18n="nav.skills">HABILIDADES TÉCNICAS</li></a>
+              <a href="#my-projects"><li data-i18n="nav.projects">MIS PROYECTOS</li></a>
+              <a href="#contact-me"><li data-i18n="nav.contact">CONTACTO</li></a>  
             </ul>         
           </li>            
         </ul>        
@@ -38,7 +65,7 @@
       <div class="row portada-row">
         <div class="col-6 portada-info">
           <h2 id="portada-name">Daniela Pinto</h2>  
-          <p><i class="fa-solid fa-rocket"></i>&nbsp;Programmer</p> 
+          <p><i class="fa-solid fa-rocket"></i>&nbsp;<span data-i18n="portada.role">Programadora</span></p> 
         </div>
         <div class="col-6 portada-image">
           <img
@@ -58,38 +85,23 @@
             alt="Daniela Pinto"
           />
       </div>
-      <div class="info spanish" style="display: none;">
-          <h2 id="sobre-mi"><i class="fa-solid fa-user-astronaut" style="margin-right: 20px;"></i>Sobre mí</h2>  
-          <p>
-            ¡Hola! Soy Daniela y soy desarrolladora de software.
-          </p>           
-          <p>
-            En 2023 me gradué como Técnica Universitaria en Programación en la Universidad Tecnológica Nacional (UTN) y en la actualidad me desempeño principalmente como desarrolladora Back-End.
-          </br>
-            Me gusta trabajar en equipo y aprender cosas nuevas, apuntando siempre a mejorar mis prácticas y a ampliar mis conocimientos de manera proactiva.
-          </p>
-          <p>
-            Antes de comenzar mi carrera en tecnología, me formé y ejercí como Técnica de Laboratorio, especializándome en el área de bacteriología clínica.
-          </p>
-      </div>  
-      <div class="info english">
-        <h2 id="sobre-mi"><i class="fa-solid fa-user-astronaut" style="margin-right: 20px;"></i>Sobre mí</h2>  
-        <p>
-          Hi! I'm Daniela and I'm a software developer from Argentina.
+      <div class="info">
+        <h2><i class="fa-solid fa-user-astronaut" style="margin-right: 20px;"></i><span data-i18n="about.title">Sobre mí</span></h2>  
+        <p data-i18n="about.p1">
+          ¡Hola! Soy Daniela y soy desarrolladora de software.
         </p>           
-        <p>
-          I graduated in 2023 with a University Technician degree in Programming from the National Technological University (UTN), and I'm currently working as a Full Stack .NET Developer.
-          </br>
-          I’m passionate about teamwork and always eager to learn new things, aiming to improve my skills and expand my knowledge in a proactive way.
-        </p>
-        <p>
-          A little more about my background...
+        <p data-i18n="about.p2">
+          En 2023 me gradué como Técnica Universitaria en Programación en la Universidad Tecnológica Nacional (UTN) y en la actualidad me desempeño principalmente como desarrolladora Back-End.
           <br>
-          Before transitioning into the tech field, I studied and worked as a Laboratory Technician, specializing in clinical bacteriology.
+          Me gusta trabajar en equipo y aprender cosas nuevas, apuntando siempre a mejorar mis prácticas y a ampliar mis conocimientos de manera proactiva.
         </p>
-    </div>  
+        <p data-i18n="about.p3">
+          Antes de comenzar mi carrera en tecnología, me formé y ejercí como Técnica de Laboratorio, especializándome en el área de bacteriología clínica.
+        </p>
+      </div>  
     </section>
     
+    <!-- MY STACK: sin traducción según lo solicitado -->
     <section class="my-stack">
       <section>
         <h2 id="my-stack">Skills</h2>
@@ -148,28 +160,39 @@
     </section>
     
     <section class="my-info-2">
-      <h2 id="my-projects">Some of my projects</h2>
+      <h2 id="my-projects" data-i18n="projects.title">Algunos de mis proyectos</h2>
      
       <section>
-        <h3>Personal projects</h3>
+        <h3 data-i18n="projects.personal">Proyectos personales</h3>
       </section>
         <section class="projects">  
-             <div class="apps">          
+          <div class="apps">          
+            <div class="content">           
+              <div>
+                <img src="images/nucleodat.png" alt="foto lector de LIS">
+              </div>
+              <div class="proj-parrafo">
+                <h3 data-i18n="proj.nucleodat.title">Sistema de gestión para laboratorios</h3>
+                <p data-i18n="proj.nucleodat.desc">
+                  Versión DEMO de una aplicación web .NET que permite gestionar la información de un laboratorio en sus diferentes etapas, desde la recepción de pacientes hasta la entrega de resultados.
+                </p>
+              </div>
+            </div>  
+          </div>     
+
+          <div class="apps">          
             <div class="content">           
               <div>
                 <img src="images/lector-factura-1.png" alt="foto lector de facturas">
               </div>
               <div class="proj-parrafo">
-                <h3>Bill Reader with AI</h3>
-                <p>
-                  This .NET MVC project is a web application that allows you to input an invoice in image or PDF format and uses AI to extract the most relevant data.                </p>
-                <!--
-                -->
-                <a href="" target=""><i class="fa-brands fa-github"></i>&nbsp; REPOSITORY COMING SOON</a>
-
+                <h3 data-i18n="proj.lector.title">Lector de facturas con IA</h3>
+                <p data-i18n="proj.lector.desc">
+                  Proyecto .NET MVC que permite ingresar una factura en formato imagen o PDF y utiliza IA para extraer los datos más relevantes.
+                </p>
               </div>
             </div>  
-          </div>     
+          </div>  
            
           <div class="apps">          
             <div class="content">           
@@ -178,15 +201,15 @@
               </div>
               <div class="proj-parrafo">
                 <h3>ASP.NET Core guides</h3>
-                <p>
-                  This front-end project is a documentation page that includes several guides for API development using ASP.NET Core 6 and beyond.                  <br>                
+                <p data-i18n="proj.netcore.desc">
+                  Proyecto front-end que es una página de documentación con guías para el desarrollo de APIs usando ASP.NET Core 6 y versiones posteriores.
+                  <br>
                 </p>
-                <a href="https://pintodaniela.github.io/NetCore-docs/" target="_blank"><i class="fa-solid fa-globe"></i>&nbsp; VISIT THE WEBSITE</a>
+                <a href="https://pintodaniela.github.io/NetCore-docs/" target="_blank"><i class="fa-solid fa-globe"></i>&nbsp; <span data-i18n="proj.visitsite">VISITAR EL SITIO</span></a>
               </div>
             </div>  
           </div>     
           
-       
           <div class="apps">          
             <div class="content">           
               <div>
@@ -194,15 +217,14 @@
               </div>
               <div class="proj-parrafo">
                 <h3>Tres Empanadas App</h3>
-                <p>
-                  An MVC application developed in C# with ASP.NET Core, designed to organize group orders for empanadas.
+                <p data-i18n="proj.empanadas.desc">
+                  Aplicación MVC desarrollada en C# con ASP.NET Core, diseñada para organizar pedidos grupales de empanadas.
                   <br>
-                  Each user can place their individual order, and the app consolidates all orders into a single list for group purchasing.
+                  Cada usuario puede hacer su pedido individual y la app consolida todos los pedidos en una única lista para la compra grupal.
                   <br>
-                  The app uses JWT authentication.
+                  La app utiliza autenticación JWT.
                   <br>                                                  
                 </p>
-                <a href="https://github.com/PintoDaniela/PedidoEmpanadas-ASP.NET_Core_MVC" target="_blank"><i class="fa-brands fa-github"></i>&nbsp; VER REPO</a>
               </div>
             </div>          
           </div>
@@ -214,15 +236,14 @@
               </div>
               <div class="proj-parrafo">
                 <h3>REST API - El Portal Bookstore</h3>
-                <p>
-                  REST API developed in C# with ASP.NET Core 6.
+                <p data-i18n="proj.elportal.desc">
+                  REST API desarrollada en C# con ASP.NET Core 6.
                   <br>
-                  This is a DB First approach project, aimed at managing database access from an MVC application.
+                  Proyecto con enfoque DB First, orientado a gestionar el acceso a la base de datos desde una aplicación MVC.
                   <br>
-                  The API uses Swagger as an interactive documentation tool.
+                  La API utiliza Swagger como herramienta de documentación interactiva.
                   <br>
                 </p>
-                <a href="https://github.com/PintoDaniela/LibreriaElPortal-WebAPI" target="_blank"><i class="fa-brands fa-github"></i>&nbsp; VISIT REPOSITORY</a>
               </div>
             </div>  
           </div> 
@@ -232,20 +253,20 @@
                 <img src="images/calculadora-pf.png" alt="calculadora foto">
               </div>
               <div class="proj-parrafo">
-                <h3>Savings Calculator</h3>
-                 <p>
-                  This was the first project I worked on when I first stepped into the world of programming 🌱
+                <h3 data-i18n="proj.calc.title">Calculadora de ahorros</h3>
+                <p data-i18n="proj.calc.desc">
+                  Este fue el primer proyecto en el que trabajé cuando di mis primeros pasos en el mundo de la programación 🌱
                   <br>
-                  I'm sharing it as a reminder of that first small step on this amazing journey.
+                  Lo comparto como un recordatorio de ese primer pequeño paso en este increíble camino.
                   <br>
                 </p>
-                <a href="pages/calculadora.html" target="_blank"><i class="fa-sharp fa-solid fa-flask"></i> &nbsp;CALCULATE</a>
+                <a href="pages/calculadora.html" target="_blank"><i class="fa-sharp fa-solid fa-flask"></i> &nbsp;<span data-i18n="proj.calc.btn">CALCULAR</span></a>
               </div>
             </div>
           </div>           
         </section>
         <section>
-          <h3>University Coursework Projects</h3>
+          <h3 data-i18n="projects.university">Proyectos universitarios</h3>
         </section>      
         <section class="projects">
           <div class="apps">          
@@ -255,13 +276,12 @@
               </div>
               <div class="proj-parrafo">
                 <h3>WinForms App</h3>
-                <p>
-                  Collaborative project completed in Programming 3 of the University Technician in Programming (UTN) program.
+                <p data-i18n="proj.winforms.desc">
+                  Proyecto colaborativo de la materia Programación 3 de la Tecnicatura Universitaria en Programación (UTN).
                   <br>
-                  Desktop application for ABM (CRUD) of items, developed in C# with .NET Framework.
+                  Aplicación de escritorio para ABM (CRUD) de elementos, desarrollada en C# con .NET Framework.
                   <br>
                 </p>
-                <a href="https://github.com/PintoDaniela/tp-winform-equipo-3" target="_blank"><i class="fa-brands fa-github"></i>&nbsp;VISIT REPOSITORY</a>
               </div>
             </div>
           </div> 
@@ -271,37 +291,33 @@
                 <img src="images/gestion-parque.jpg" alt="parque jurasico foto">
               </div>
               <div class="proj-parrafo">
-                <h3>Management System</h3>
-                <p>
-                  Console application developed in C++ during the Computer Lab 2 course of the University Technician in Programming (UTN) program.
+                <h3 data-i18n="proj.parque.title">Sistema de gestión</h3>
+                <p data-i18n="proj.parque.desc">
+                  Aplicación de consola desarrollada en C++ durante la materia Laboratorio de Computación 2 de la Tecnicatura Universitaria en Programación (UTN).
                   <br>
-                  The program is designed to manage a fictional adventure park.
+                  El programa está diseñado para gestionar un parque de aventura ficticio.
                   <br>
                 </p>
-                <a href="https://github.com/PintoDaniela/Sistema_de_Gestion" target="_blank"><i class="fa-brands fa-github"></i>&nbsp;VISIT REPOSITORY</a>
               </div>
             </div>
           </div>
-           <div class="apps">          
+          <div class="apps">          
             <div class="content">           
               <div>
                 <img src="images/gran-cerdo.png" alt="gran cerdo foto">
               </div>
               <div class="proj-parrafo">
                 <h3>Gran Cerdo</h3>
-                <p>
-                  This console application is a videogame, developed in C++ during the Computer Lab 1 course of the University Technician in Programming (UTN) program.
-                  <br>
-                  
+                <p data-i18n="proj.grancerdo.desc">
+                  Esta aplicación de consola es un videojuego desarrollado en C++ durante la materia Laboratorio de Computación 1 de la Tecnicatura Universitaria en Programación (UTN).
                   <br>
                 </p>
-                <a href="https://github.com/PintoDaniela/Gran_Cerdo" target="_blank"><i class="fa-brands fa-github"></i>&nbsp;VISIT REPOSITORY</a>
               </div>
             </div>
           </div>
         </section>
         <section>
-          <h3>Random staff</h3>
+          <h3 data-i18n="projects.random">Otros proyectos</h3>
         </section>
           <section class="projects">
             <div class="apps">          
@@ -311,9 +327,10 @@
                 </div>
                 <div class="proj-parrafo">
                   <h3>pixel art</h3>
-                  <p> Images created using pixel art techniques.
+                  <p data-i18n="proj.pixelart.desc">
+                    Imágenes creadas con técnicas de pixel art.
                     <br>
-                    Some of these were designed to be used in some of the projects shared in this portfolio.
+                    Algunas fueron diseñadas para ser usadas en otros proyectos de este portfolio.
                   </p>
                 </div>
               </div>                  
@@ -325,12 +342,10 @@
                 </div>
                 <div class="proj-parrafo">
                   <h3>Memo test</h3>
-                  <p> Memory game created with HTML, CSS, and JavaScript.
-                    <br>
-                    The project was developed during a JavaScript course taught by Ania Kubow (FreeCodeCamp).
-                    <br>
+                  <p data-i18n="proj.memo.desc">
+                    Juego de memoria creado con HTML, CSS y JavaScript.
                   </p>
-                  <a href="pages/memo-game.html" target="_blank"><i class="fa-solid fa-gamepad"></i>&nbsp;PLAY</a>
+                  <a href="pages/memo-game.html" target="_blank"><i class="fa-solid fa-gamepad"></i>&nbsp;<span data-i18n="proj.memo.btn">JUGAR</span></a>
                 </div>
               </div>
             </div>   
@@ -341,13 +356,13 @@
                 </div>
                 <div class="proj-parrafo">
                   <h3>HTML and CSS Piano</h3>
-                  <p>
-                    Project completed during the "Responsive Web Design" course from FreeCodeCamp, using HTML and CSS.
+                  <p data-i18n="proj.piano.desc">
+                    Proyecto del curso "Responsive Web Design" de FreeCodeCamp, usando HTML y CSS.
                     <br>
-                    It dynamically adjusts to the screen size.
+                    Se adapta dinámicamente al tamaño de la pantalla.
                     <br>
                   </p>
-                  <a href="https://pintodaniela.github.io/Piano/" target="_blank"><i class="fa-solid fa-music"></i>&nbsp;SEE THE PIANO PAGE</a>
+                  <a href="https://pintodaniela.github.io/Piano/" target="_blank"><i class="fa-solid fa-music"></i>&nbsp;<span data-i18n="proj.piano.btn">VER EL PIANO</span></a>
                 </div>
               </div>  
             </div>
@@ -358,59 +373,27 @@
                 </div>
                 <div class="proj-parrafo">   
                   <h3>Budget App</h3>         
-                  <p>
-                    Application developed in Python that allows for budget analysis visualization in both table and bar chart formats.
+                  <p data-i18n="proj.budget.desc">
+                    Aplicación desarrollada en Python que permite visualizar el análisis de presupuesto en formato de tabla y gráfico de barras.
                     <br>
-                    This project was completed as part of the "Scientific Computing with Python" course from FreeCodeCamp.
+                    Este proyecto fue realizado como parte del curso "Scientific Computing with Python" de FreeCodeCamp.
                     <br>
                   </p>
-                  <a href="https://github.com/PintoDaniela/budget_app" target="_blank"><i class="fa-brands fa-github"></i>&nbsp;VISIT REPOSITORY</a>
                 </div>
               </div>
             </div>          
           </section>
         </section>     
     </section> 
-<!--
- <section class="contacto">
-      <h2 id="contact-me">Contactame</h2>
-      <section>
-        <form action="#" id="formulario">
-          <div>
-              <label for="nombre">Nombre</label><br>
-              <input type="text" id="nombre">
-          </div>
-          <div>
-            <label for="apellido">Apellido</label><br>
-            <input type="text" id="apellido">
-          </div>
-          <div>
-            <label for="email">Email</label><br>
-            <input type="email" id="email">
-          </div>
-          <div>
-            <label for="mensaje">Mensaje</label><br>
-            <textarea name="mensaje" id="mensaje" cols="30" rows="20"></textarea>
-          </div>   
-          
-          <button type="submit" id="enviar">ENVIAR</button>  
-          <div id="falla-mensaje">
-            <p id="mensajeEnviar">
-              <span ></span>
-            </p>
-          </div>  
-        </form> 
-      </section> 
-    </section>
--->
+ 
     <section class="redes">      
-      <h3>... More projects on GitHub</h3>
+      <h3 data-i18n="redes.github">... Más proyectos en GitHub</h3>
       <section>
-        <a href="https://github.com/PintoDaniela" target="_blank"><i class="fa-brands fa-github" ></i></a>
+        <a href="https://github.com/PintoDaniela" target="_blank"><i class="fa-brands fa-github"></i></a>
       </section>  
     </section>
     <section class="redes">      
-      <h3 id="contact-me">Contact me</h3>
+      <h3 id="contact-me" data-i18n="contact.title">Contacto</h3>
       <section>
         <a href="https://www.linkedin.com/in/daniela-pinto-818982137/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
         <a href="mailto:danielafpinto90@gmail.com"><i class="fa-regular fa-paper-plane"></i></a>
@@ -420,16 +403,16 @@
     <footer>  
       <div>
         <ul class="menu-footer">
-          <a href="#"><li>INDEX</li></a> 
-          <a href="#about-me"><li>ABOUT ME</li></a>
-          <a href="#my-stack"><li>TECHNICAL SKILLS</li></a>
-          <a href="#my-projects"><li>MY PROJECTS</li></a>
-          <a href="#contact-me"><li>CONTACT ME</li></a>
+          <a href="#"><li data-i18n="nav.index">INICIO</li></a> 
+          <a href="#about-me"><li data-i18n="nav.about">SOBRE MÍ</li></a>
+          <a href="#my-stack"><li data-i18n="nav.skills">HABILIDADES TÉCNICAS</li></a>
+          <a href="#my-projects"><li data-i18n="nav.projects">MIS PROYECTOS</li></a>
+          <a href="#contact-me"><li data-i18n="nav.contact">CONTACTO</li></a>
         </ul> 
      </div> 
      
     <div class="btn-footer">        
-      <a href="#"><div class="btn btn-primary btn-custom">Back to the top</div></a>
+      <a href="#"><div class="btn btn-primary btn-custom" data-i18n="footer.back">Volver al inicio</div></a>
     </div>   
                       
     </footer>
@@ -437,5 +420,112 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+    <script>
+      const translations = {
+        es: {
+          "nav.index": "INICIO",
+          "nav.about": "SOBRE MÍ",
+          "nav.skills": "HABILIDADES TÉCNICAS",
+          "nav.projects": "MIS PROYECTOS",
+          "nav.contact": "CONTACTO",
+          "portada.role": "Programadora",
+          "about.title": "Sobre mí",
+          "about.p1": "¡Hola! Soy Daniela y soy desarrolladora de software.",
+          "about.p2": "En 2023 me gradué como Técnica Universitaria en Programación en la Universidad Tecnológica Nacional (UTN) y en la actualidad me desempeño principalmente como desarrolladora Back-End.<br>Me gusta trabajar en equipo y aprender cosas nuevas, apuntando siempre a mejorar mis prácticas y a ampliar mis conocimientos de manera proactiva.",
+          "about.p3": "Antes de comenzar mi carrera en tecnología, me formé y ejercí como Técnica de Laboratorio, especializándome en el área de bacteriología clínica.",
+          "projects.title": "Algunos de mis proyectos",
+          "projects.personal": "Proyectos personales",
+          "projects.university": "Proyectos universitarios",
+          "projects.random": "Otros proyectos",
+          "proj.nucleodat.title": "Sistema de gestión para laboratorios",
+          "proj.nucleodat.desc": "Versión DEMO de una aplicación web .NET que permite gestionar la información de un laboratorio en sus diferentes etapas, desde la recepción de pacientes hasta la entrega de resultados.",
+          "proj.lector.title": "Lector de facturas con IA",
+          "proj.lector.desc": "Proyecto .NET MVC que permite ingresar una factura en formato imagen o PDF y utiliza IA para extraer los datos más relevantes.",
+          "proj.netcore.desc": "Proyecto front-end que es una página de documentación con guías para el desarrollo de APIs usando ASP.NET Core 6 y versiones posteriores.<br>",
+          "proj.visitsite": "VISITAR EL SITIO",
+          "proj.empanadas.desc": "Aplicación MVC desarrollada en C# con ASP.NET Core, diseñada para organizar pedidos grupales de empanadas.<br>Cada usuario puede hacer su pedido individual y la app consolida todos los pedidos en una única lista para la compra grupal.<br>La app utiliza autenticación JWT.<br>",
+          "proj.elportal.desc": "REST API desarrollada en C# con ASP.NET Core 6.<br>Proyecto con enfoque DB First, orientado a gestionar el acceso a la base de datos desde una aplicación MVC.<br>La API utiliza Swagger como herramienta de documentación interactiva.<br>",
+          "proj.calc.title": "Calculadora de ahorros",
+          "proj.calc.desc": "Este fue el primer proyecto en el que trabajé cuando di mis primeros pasos en el mundo de la programación 🌱<br>Lo comparto como un recordatorio de ese primer pequeño paso en este increíble camino.<br>",
+          "proj.calc.btn": "CALCULAR",
+          "proj.winforms.desc": "Proyecto colaborativo de la materia Programación 3 de la Tecnicatura Universitaria en Programación (UTN).<br>Aplicación de escritorio para ABM (CRUD) de elementos, desarrollada en C# con .NET Framework.<br>",
+          "proj.parque.title": "Sistema de gestión",
+          "proj.parque.desc": "Aplicación de consola desarrollada en C++ durante la materia Laboratorio de Computación 2 de la Tecnicatura Universitaria en Programación (UTN).<br>El programa está diseñado para gestionar un parque de aventura ficticio.<br>",
+          "proj.grancerdo.desc": "Esta aplicación de consola es un videojuego desarrollado en C++ durante la materia Laboratorio de Computación 1 de la Tecnicatura Universitaria en Programación (UTN).<br>",
+          "proj.pixelart.desc": "Imágenes creadas con técnicas de pixel art.<br>Algunas fueron diseñadas para ser usadas en otros proyectos de este portfolio.",
+          "proj.memo.desc": "Juego de memoria creado con HTML, CSS y JavaScript.",
+          "proj.memo.btn": "JUGAR",
+          "proj.piano.desc": "Proyecto del curso \"Responsive Web Design\" de FreeCodeCamp, usando HTML y CSS.<br>Se adapta dinámicamente al tamaño de la pantalla.<br>",
+          "proj.piano.btn": "VER EL PIANO",
+          "proj.budget.desc": "Aplicación desarrollada en Python que permite visualizar el análisis de presupuesto en formato de tabla y gráfico de barras.<br>Este proyecto fue realizado como parte del curso \"Scientific Computing with Python\" de FreeCodeCamp.<br>",
+          "redes.github": "... Más proyectos en GitHub",
+          "contact.title": "Contacto",
+          "footer.back": "Volver al inicio"
+        },
+        en: {
+          "nav.index": "INDEX",
+          "nav.about": "ABOUT ME",
+          "nav.skills": "TECHNICAL SKILLS",
+          "nav.projects": "MY PROJECTS",
+          "nav.contact": "CONTACT ME",
+          "portada.role": "Programmer",
+          "about.title": "About me",
+          "about.p1": "Hi! I'm Daniela and I'm a software developer from Argentina.",
+          "about.p2": "I graduated in 2023 with a University Technician degree in Programming from the National Technological University (UTN), and I'm currently working as a Full Stack .NET Developer.<br>I'm passionate about teamwork and always eager to learn new things, aiming to improve my skills and expand my knowledge in a proactive way.",
+          "about.p3": "A little more about my background...<br>Before transitioning into the tech field, I studied and worked as a Laboratory Technician, specializing in clinical bacteriology.",
+          "projects.title": "Some of my projects",
+          "projects.personal": "Personal projects",
+          "projects.university": "University Coursework Projects",
+          "projects.random": "Random stuff",
+          "proj.nucleodat.title": "Laboratory Management System",
+          "proj.nucleodat.desc": "DEMO version of a .NET web application that manages laboratory information across its different stages, from patient reception to results delivery.",
+          "proj.lector.title": "AI Invoice Reader",
+          "proj.lector.desc": "This .NET MVC project is a web application that allows you to input an invoice in image or PDF format and uses AI to extract the most relevant data.",
+          "proj.netcore.desc": "This front-end project is a documentation page that includes several guides for API development using ASP.NET Core 6 and beyond.<br>",
+          "proj.visitsite": "VISIT THE WEBSITE",
+          "proj.empanadas.desc": "An MVC application developed in C# with ASP.NET Core, designed to organize group orders for empanadas.<br>Each user can place their individual order, and the app consolidates all orders into a single list for group purchasing.<br>The app uses JWT authentication.<br>",
+          "proj.elportal.desc": "REST API developed in C# with ASP.NET Core 6.<br>This is a DB First approach project, aimed at managing database access from an MVC application.<br>The API uses Swagger as an interactive documentation tool.<br>",
+          "proj.calc.title": "Savings Calculator",
+          "proj.calc.desc": "This was the first project I worked on when I first stepped into the world of programming 🌱<br>I'm sharing it as a reminder of that first small step on this amazing journey.<br>",
+          "proj.calc.btn": "CALCULATE",
+          "proj.winforms.desc": "Collaborative project completed in Programming 3 of the University Technician in Programming (UTN) program.<br>Desktop application for ABM (CRUD) of items, developed in C# with .NET Framework.<br>",
+          "proj.parque.title": "Management System",
+          "proj.parque.desc": "Console application developed in C++ during the Computer Lab 2 course of the University Technician in Programming (UTN) program.<br>The program is designed to manage a fictional adventure park.<br>",
+          "proj.grancerdo.desc": "This console application is a videogame, developed in C++ during the Computer Lab 1 course of the University Technician in Programming (UTN) program.<br>",
+          "proj.pixelart.desc": "Images created using pixel art techniques.<br>Some of these were designed to be used in some of the projects shared in this portfolio.",
+          "proj.memo.desc": "Memory game created with HTML, CSS, and JavaScript.",
+          "proj.memo.btn": "PLAY",
+          "proj.piano.desc": "Project completed during the \"Responsive Web Design\" course from FreeCodeCamp, using HTML and CSS.<br>It dynamically adjusts to the screen size.<br>",
+          "proj.piano.btn": "SEE THE PIANO PAGE",
+          "proj.budget.desc": "Application developed in Python that allows for budget analysis visualization in both table and bar chart formats.<br>This project was completed as part of the \"Scientific Computing with Python\" course from FreeCodeCamp.<br>",
+          "redes.github": "... More projects on GitHub",
+          "contact.title": "Contact me",
+          "footer.back": "Back to the top"
+        }
+      };
+
+      let currentLang = 'es';
+
+      function applyLang(lang) {
+        const t = translations[lang];
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const key = el.getAttribute('data-i18n');
+          if (t[key] !== undefined) {
+            el.innerHTML = t[key];
+          }
+        });
+        document.getElementById('lang-toggle').textContent = lang === 'es' ? 'EN' : 'ES';
+        document.documentElement.lang = lang;
+      }
+
+      function toggleLang() {
+        currentLang = currentLang === 'es' ? 'en' : 'es';
+        applyLang(currentLang);
+      }
+
+      // Aplicar español al cargar
+      applyLang('es');
+    </script>
   </body>
 </html>
